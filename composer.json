@@ -1,0 +1,16 @@
+{
+  "authors" : [
+    {
+      "email" : "jbboehr@gmail.com",
+      "name" : "John Boehr"
+    }
+  ],
+  "description" : "Idle watcher",
+  "homepage": "http://github.com/jbboehr/jquery.idle.js",
+  "name" : "jbboehr/jquery-idle",
+  "keywords" : [
+    "jquery"
+  ],
+  "license": "MIT",
+  "type" : "library"
+}
