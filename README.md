@@ -28,7 +28,7 @@ $.idle().off('active', fn)
 
 Info passed to callback
 
-```json
+```js
 {
   // instance event was registered to
   instance : {},
@@ -68,7 +68,7 @@ $.idle().clearInterval(fn);
 ```
 
 Info passed to callback:
-```json
+```js
 {
   // instance callback was registered to
   instance : {},
