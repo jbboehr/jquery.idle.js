@@ -15,6 +15,8 @@
   }
 }(function($) {
   
+  /* global $:false, jQuery:true, console:true */
+  
   // Defaults
   
   var defaults = {
@@ -180,7 +182,7 @@
    */
   function eventHandler(event) {
     this.lastSource = event.type;
-    if( event.type == 'blur' ) {
+    if( event.type === 'blur' ) {
       this.lastInactivity = now();
     } else {
       this.lastActivity = now();
@@ -412,7 +414,7 @@
       return this;
     }
     
-  } // End Idle.prototype
+  }; // End Idle.prototype
   
   
   
