@@ -146,7 +146,7 @@
   function changeState(state) {
     if( this.state !== state ) {
       this.log(this.state, ' -> ', state, '(', this.lastSource, ')', '(', this.lastReason, ')');
-      this.lastSource = null, this.lastReason = null;
+      //this.lastSource = null, this.lastReason = null;
 
       this.state = state;
       this.trigger(state);
@@ -311,10 +311,12 @@
       this.detach = function() { return this; };
       
       this.$win.off('blur focus', this.eventHandler);
+      this.eventHandler = undefined;
 
       refDecr();
 
       clearInterval(this.pollInterval);
+      this.pollInterval = undefined;
 
       this.off('active');
       this.off('idle');
@@ -390,7 +392,7 @@
       if( typeof(id) === 'function' ) {
         for( var i in this.intervals ) {
           if( this.intervals[i].fn === id ) {
-            delete this.intevals[i];
+            delete this.intervals[i];
           }
         }
       } else {
